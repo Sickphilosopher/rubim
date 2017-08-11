@@ -1,5 +1,5 @@
 require "rubim/version"
 
+require 'rubim/entry_tree_builder'
 module Rubim
-  # Your code goes here...
 end
