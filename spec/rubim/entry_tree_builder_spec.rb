@@ -73,13 +73,26 @@ describe Rubim::EntryTreeBuilder do
 			end
 		end
 
-		describe 'mods' do
+		describe 'js' do
 			it 'fills js' do
 				input = {block: 'b1', js: {test: true}}
 
 				result = builder.build(input)
 
 				expected = Rubim::Entry.from_hash(block: 'b1', js: {test: true})
+
+				expect(result).to eq expected
+			end
+		end
+
+		describe 'not bem fields' do
+			it 'fills opts' do
+				input = {block: 'b1', test1: 'test1', test2: 'test2'}
+
+				result = builder.build(input)
+
+				expected = Rubim::Entry.from_hash(block: 'b1')
+				expected.opts = {test1: 'test1', test2: 'test2'}
 
 				expect(result).to eq expected
 			end
@@ -146,8 +159,6 @@ describe Rubim::EntryTreeBuilder do
 						]
 					)
 				)
-				p expected
-				p result
 				expect(result).to eq expected
 			end
 		end

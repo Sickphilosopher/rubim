@@ -36,13 +36,14 @@ describe 'entry tree template' do
 		bundle.add(template)
 
 		input = JSON.parse(File.read(__dir__+'/bemjson.json'), symbolize_names: true)
-		n = 50
+		n = 5000
 
 		pages = []
 		Benchmark.bm(5) do |x|
 			x.report('building') do
 				n.times do
-					pages << builder.build(input)
+					page = builder.build(input.dup)
+					pages << page
 				end
 			end
 		end
