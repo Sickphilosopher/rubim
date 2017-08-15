@@ -1,3 +1,3 @@
 module Rubim
-	Context = Struct.new(:block, :content, :tag)
+	Context = Struct.new(:block, :parent_block, :content, :tag, :mix)
 end

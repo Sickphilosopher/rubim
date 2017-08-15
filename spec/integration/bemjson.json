@@ -1,0 +1,4395 @@
+{
+		"block": "page",
+		"title": "Поиск креатива",
+		"favicon": "/favicon.png",
+		"styles": [
+				[
+						{
+								"elem": "css",
+								"url": "/inner.min.css"
+						}
+				],
+				{
+						"elem": "css",
+						"url": "https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic"
+				}
+		],
+		"scripts": [
+				[
+						{
+								"elem": "js",
+								"url": "/inner.min.js"
+						}
+				]
+		],
+		"head": [
+				{
+						"elem": "meta",
+						"attrs": {
+								"name": "description",
+								"content": "Описалово"
+						}
+				},
+				{
+						"elem": "meta",
+						"attrs": {
+								"property": "og:title",
+								"content": "Поиск креатива"
+						}
+				},
+				{
+						"elem": "meta",
+						"attrs": {
+								"property": "og:url"
+						}
+				},
+				{
+						"elem": "meta",
+						"attrs": {
+								"property": "og:site_name"
+						}
+				},
+				{
+						"elem": "meta",
+						"attrs": {
+								"property": "og:locale",
+								"content": "ru_RU"
+						}
+				},
+				{
+						"elem": "meta",
+						"attrs": {
+								"property": "og:type",
+								"content": "website"
+						}
+				},
+				{
+						"elem": "meta",
+						"attrs": {
+								"name": "viewport",
+								"content": "width=device-width, initial-scale=1"
+						}
+				}
+		],
+		"mods": {
+				"view": "search"
+		},
+		"content": [
+				{
+						"block": "header",
+						"content": [
+								{
+										"elem": "content",
+										"content": [
+												{
+														"block": "logo",
+														"mix": {
+																"elem": "logo",
+																"block": "header"
+														},
+														"mods": {
+																"size": "s"
+														}
+												},
+												{
+														"block": "top-menu",
+														"mix": {
+																"elem": "menu",
+																"block": "header"
+														}
+												},
+												{
+														"elem": "user-part",
+														"content": [
+																{
+																		"block": "user-info",
+																		"mix": {
+																				"elem": "user",
+																				"block": "header"
+																		},
+																		"content": [
+																				{
+																						"elem": "ava-container",
+																						"content": [
+																								{
+																										"elem": "ava",
+																										"tag": "img",
+																										"attrs": {
+																												"src": "/img/temp/ava.png"
+																										}
+																								},
+																								{
+																										"elem": "counter",
+																										"content": "22"
+																								}
+																						]
+																				},
+																				{
+																						"elem": "email",
+																						"content": "katenoknet@gmail.com"
+																				}
+																		]
+																},
+																{
+																		"block": "burger"
+																}
+														]
+												}
+										]
+								}
+						]
+				},
+				{
+						"block": "body",
+						"mix": {
+								"elem": "body",
+								"block": "page"
+						},
+						"mods": {
+								"view": "search"
+						},
+						"content": [
+								{
+										"block": "search-form",
+										"mix": {
+												"block": "content"
+										},
+										"content": [
+												{
+														"block": "form",
+														"mods": {
+																"has-validation": true,
+																"message": "text"
+														},
+														"mix": {
+																"elem": "form",
+																"block": "search-form"
+														},
+														"method": "GET",
+														"content": [
+																{
+																		"block": "form-field",
+																		"id": "query",
+																		"name": "q",
+																		"mix": {
+																				"elem": "query",
+																				"block": "search-form"
+																		},
+																		"mods": {
+																				"type": "input",
+																				"has-validation": true,
+																				"required": true,
+																				"message": "text"
+																		},
+																		"content": [
+																				{
+																						"block": "search-input",
+																						"mix": {
+																								"elem": "search-input",
+																								"block": "search-form"
+																						},
+																						"placeholder": "Поиск по тексту/ссылке/названию приложения",
+																						"submitText": "Найти",
+																						"content": [
+																								{
+																										"block": "input",
+																										"mix": {
+																												"elem": "text-input",
+																												"block": "search-input"
+																										},
+																										"mods": {
+																												"has-clear": true,
+																												"type": "search"
+																										},
+																										"placeholder": "Поиск по тексту/ссылке/названию приложения",
+																										"js": true
+																								},
+																								{
+																										"block": "calendar",
+																										"mix": {
+																												"elem": "calendar",
+																												"block": "search-input"
+																										}
+																								},
+																								{
+																										"block": "button",
+																										"mods": {
+																												"size": "m",
+																												"type": "submit"
+																										},
+																										"mix": {
+																												"elem": "submit",
+																												"block": "search-input"
+																										},
+																										"text": "Искать"
+																								}
+																						]
+																				}
+																		]
+																},
+																{
+																		"block": "form-field",
+																		"mix": {
+																				"elem": "field",
+																				"block": "search-form"
+																		},
+																		"id": "socialNet",
+																		"mods": {
+																				"type": "input",
+																				"has-validation": true,
+																				"required": true,
+																				"message": "text"
+																		},
+																		"content": [
+																				{
+																						"block": "label",
+																						"content": "Выберите сеть",
+																						"help": "Здесь должен быть хэлп",
+																						"js": true
+																				},
+																				{
+																						"block": "select",
+																						"mods": {
+																								"mode": "radio",
+																								"size": "m",
+																								"view": "plain"
+																						},
+																						"name": "social",
+																						"val": 2,
+																						"text": "Подписаться на новости",
+																						"options": [
+																								{
+																										"val": 1,
+																										"text": "Facebook",
+																										"checkedText": "tw",
+																										"icon": {
+																												"block": "icon",
+																												"mods": {
+																														"social": "twitter"
+																												}
+																										}
+																								},
+																								{
+																										"val": 2,
+																										"text": "VKontakte",
+																										"checkedText": "vk"
+																								}
+																						]
+																				}
+																		]
+																},
+																{
+																		"block": "form-field",
+																		"id": "creativeAge",
+																		"mix": {
+																				"elem": "field",
+																				"block": "search-form"
+																		},
+																		"mods": {
+																				"type": "input",
+																				"has-validation": true,
+																				"required": true,
+																				"message": "text"
+																		},
+																		"content": [
+																				{
+																						"block": "label",
+																						"content": "Возраст креативов",
+																						"help": "Здесь должен быть хэлп",
+																						"js": true
+																				},
+																				{
+																						"block": "range",
+																						"js": {
+																								"type": "double"
+																						}
+																				}
+																		]
+																},
+																{
+																		"block": "form-field",
+																		"id": "platform",
+																		"mix": {
+																				"elem": "field",
+																				"block": "search-form"
+																		},
+																		"mods": {
+																				"type": "input",
+																				"has-validation": true,
+																				"required": true,
+																				"message": "text"
+																		},
+																		"content": [
+																				{
+																						"block": "label",
+																						"content": "Платформа",
+																						"help": "Здесь должен быть хэлп",
+																						"js": true
+																				},
+																				{
+																						"block": "radio-group",
+																						"mods": {
+																								"size": "m",
+																								"type": "button"
+																						},
+																						"name": "radio-button",
+																						"options": [
+																								{
+																										"val": "ios",
+																										"text": "iOS"
+																								},
+																								{
+																										"val": "android",
+																										"text": "Android"
+																								}
+																						]
+																				}
+																		]
+																},
+																{
+																		"block": "form-field",
+																		"id": "sex",
+																		"mix": {
+																				"elem": "field",
+																				"block": "search-form"
+																		},
+																		"mods": {
+																				"type": "input",
+																				"has-validation": true,
+																				"required": true,
+																				"message": "text"
+																		},
+																		"content": [
+																				{
+																						"block": "label",
+																						"content": "Пол",
+																						"help": "Здесь должен быть хэлп",
+																						"js": true
+																				},
+																				{
+																						"block": "radio-group",
+																						"mods": {
+																								"size": "m",
+																								"type": "button"
+																						},
+																						"name": "radio-button",
+																						"options": [
+																								{
+																										"val": "male",
+																										"text": "Мужик"
+																								},
+																								{
+																										"val": "female",
+																										"text": "Немужик"
+																								}
+																						]
+																				}
+																		]
+																},
+																{
+																		"block": "form-field",
+																		"id": "targetAge",
+																		"mix": {
+																				"elem": "field",
+																				"block": "search-form"
+																		},
+																		"mods": {
+																				"type": "input",
+																				"has-validation": true,
+																				"required": true,
+																				"message": "text"
+																		},
+																		"content": [
+																				{
+																						"block": "label",
+																						"content": "Возраст",
+																						"help": "Здесь должен быть хэлп",
+																						"js": true
+																				},
+																				{
+																						"block": "range",
+																						"js": {
+																								"type": "double"
+																						}
+																				}
+																		]
+																},
+																{
+																		"block": "form-field",
+																		"id": "perPage",
+																		"mix": {
+																				"elem": "field",
+																				"block": "search-form"
+																		},
+																		"mods": {
+																				"type": "input",
+																				"has-validation": true,
+																				"required": true,
+																				"message": "text"
+																		},
+																		"content": [
+																				{
+																						"block": "label",
+																						"content": "Результатов на странице",
+																						"help": "Здесь должен быть хэлп",
+																						"js": true
+																				},
+																				{
+																						"block": "select",
+																						"mods": {
+																								"mode": "radio",
+																								"size": "m",
+																								"view": "plain"
+																						},
+																						"name": "perPage",
+																						"val": 2,
+																						"options": [
+																								{
+																										"val": 1,
+																										"text": "Показать 30",
+																										"checkedText": "tw",
+																										"icon": {
+																												"block": "icon",
+																												"mods": {
+																														"social": "twitter"
+																												}
+																										}
+																								},
+																								{
+																										"val": 1,
+																										"text": "Показать 60",
+																										"checkedText": "tw",
+																										"icon": {
+																												"block": "icon",
+																												"mods": {
+																														"social": "twitter"
+																												}
+																										}
+																								},
+																								{
+																										"val": 1,
+																										"text": "Показать 90",
+																										"checkedText": "tw",
+																										"icon": {
+																												"block": "icon",
+																												"mods": {
+																														"social": "twitter"
+																												}
+																										}
+																								}
+																						]
+																				}
+																		]
+																}
+														]
+												}
+										]
+								},
+								{
+										"block": "content",
+										"content": [
+												{
+														"block": "ads",
+														"js": true,
+														"ads": [
+																{
+																		"network": "OK",
+																		"logoUrl": "https://r.mradx.net/img/5B/21CEC2.jpg",
+																		"bannerUrl": "https://r.mradx.net/img/0F/A7C605.jpg",
+																		"author": "Стратегия",
+																		"info": "Iron Desert",
+																		"text": "Буря в пустыне набирает силу. Посмотри видео и присоединяйся!12+",
+																		"landingUrl": "https://play.google.com/store/apps/details?id=com.my.irondesert&referrer=utm_source=0-2078598_1",
+																		"count": 531421
+																},
+																{
+																		"network": "OK",
+																		"logoUrl": "https://r.mradx.net/img/6B/186425.png",
+																		"bannerUrl": "https://r.mradx.net/img/FC/07C766.jpg",
+																		"author": "Игры - настольные",
+																		"info": "Твой ход!",
+																		"text": "Блесни умом и стань главным Эрудитом среди друзей!",
+																		"landingUrl": "https://itunes.apple.com/app/id689975079?mt=8&uo=4&at=11l8I2&ct=689975079%7C%7C0-2068914_1",
+																		"count": 502567
+																},
+																{
+																		"network": "OK",
+																		"logoUrl": "https://r.mradx.net/img/18/AA8325.png",
+																		"bannerUrl": "https://r.mradx.net/img/17/710F3E.jpg",
+																		"author": "Стратегия",
+																		"info": "Новогодний хит",
+																		"text": "Уникальная механика боя в бесплатном HD хите от российских разработчиков!12+",
+																		"landingUrl": "https://play.google.com/store/apps/details?id=com.my.evolution.android&referrer=utm_source=0-2094910_1",
+																		"count": 446279
+																},
+																{
+																		"network": "OK",
+																		"logoUrl": "https://r.mradx.net/img/52/310457.png",
+																		"bannerUrl": "https://r.mradx.net/img/5D/8C3B1314.jpg",
+																		"author": "Стратегия",
+																		"info": "Новогодний хит",
+																		"text": "Уникальная механика боя в бесплатном HD хите от российских разработчиков!",
+																		"landingUrl": "https://play.google.com/store/apps/details?id=com.my.evolution.android&referrer=utm_source=0-2094910_1",
+																		"count": 395303
+																},
+																{
+																		"network": "OK",
+																		"logoUrl": "https://r.mradx.net/img/57/D62B3B.jpg",
+																		"bannerUrl": "https://r.mradx.net/img/D9/6BB5C7.jpg",
+																		"author": "Телевизоры с функцией SMART TV, кинопросмотры, деньги на счет телефона.",
+																		"info": "Mr. Muscle дарит подарки!",
+																		"text": "Телевизоры с функцией SMART TV, кинопросмотры, деньги на счет телефона.",
+																		"landingUrl": "http://www.mrmuscle.pro/?utm_source=Mail.ru_Odnoklassniki_banners&utm_medium=banner&utm_campaign=MrMuscleSP",
+																		"count": 387471
+																},
+																{
+																		"network": "OK",
+																		"logoUrl": "https://r.mradx.net/img/EA/01D391.jpg",
+																		"bannerUrl": "https://r.mradx.net/img/88/F23C76.jpg",
+																		"author": "Стратегия",
+																		"info": "Уничтожь тиранов пустыни",
+																		"text": "Проверенный временем хит! Останови нефтяные войны и принеси мир на Восток!",
+																		"landingUrl": "https://play.google.com/store/apps/details?id=com.my.irondesert&referrer=utm_source=0-2095115_1",
+																		"count": 359390
+																},
+																{
+																		"network": "OK",
+																		"logoUrl": "https://r.mradx.net/img/CE/D446CB.png",
+																		"bannerUrl": "https://r.mradx.net/img/9A/8CA8B7.jpg",
+																		"author": "Официальное приложение",
+																		"info": "Одноклассники",
+																		"text": "Читай ленту и общайся с друзьями через официальное приложение!12+",
+																		"landingUrl": "https://play.google.com/store/apps/details?id=ru.ok.android&referrer=utm_campaign=948341&utm_medium=banner&utm_content=18176925&utm_source=ok.ru&rb_clickid=18176925-1444939826-186450999",
+																		"count": 327097
+																},
+																{
+																		"network": "OK",
+																		"logoUrl": "https://r.mradx.net/img/70/B7E39B.png",
+																		"bannerUrl": "https://r.mradx.net/img/CA/BE20C0.jpg",
+																		"author": "Официальное приложение",
+																		"info": "Одноклассники",
+																		"text": "Читай ленту и общайся с друзьями через официальное приложение!12+",
+																		"landingUrl": "itms-apps://itunes.apple.com/app/id398465290",
+																		"count": 323133
+																},
+																{
+																		"network": "OK",
+																		"logoUrl": "https://r.mradx.net/img/6D/A4CF25.png",
+																		"bannerUrl": "https://r.mradx.net/img/CF/1731FA.jpg",
+																		"author": "m.tabor.ru",
+																		"info": "Сайт знакомств в Москве",
+																		"text": "Популярный в Москве сайт знакомств. \nВыбор тысяч москвичей.\nЗаходите с мобильного!",
+																		"landingUrl": "http://m.tabor.ru/regpromo.php",
+																		"count": 287634
+																},
+																{
+																		"network": "OK",
+																		"logoUrl": "https://r.mradx.net/img/5B/21CEC2.jpg",
+																		"bannerUrl": "https://r.mradx.net/img/86/052D0C.jpg",
+																		"author": "Стратегия",
+																		"info": "Уничтожь тиранов пустыни",
+																		"text": "Проверенный временем хит! Останови нефтяные войны и принеси мир на Восток!12+",
+																		"landingUrl": "https://play.google.com/store/apps/details?id=com.my.irondesert&referrer=utm_source=0-2095115_1",
+																		"count": 253803
+																},
+																{
+																		"network": "OK",
+																		"logoUrl": "https://r.mradx.net/img/DD/01B972.png",
+																		"bannerUrl": "https://r.mradx.net/img/2E/9AE116.jpg",
+																		"author": "Игры",
+																		"info": "Хит зимы",
+																		"text": "Этот замок станет твоим, если сможешь его защитить! Новинка от легендарных разработчиков!",
+																		"landingUrl": "https://play.google.com/store/apps/details?id=com.my.might.glory.fantasy.strategy&referrer=utm_source=0-2084724_1",
+																		"count": 232936
+																},
+																{
+																		"network": "OK",
+																		"logoUrl": "https://r.mradx.net/img/18/AA8325.png",
+																		"bannerUrl": "https://r.mradx.net/img/37/964139.jpg",
+																		"author": "Стратегия",
+																		"info": "Враги не дремлют",
+																		"text": "Противник жесток и коварен, но на твоей стороне непобедимая команда! Действуй!",
+																		"landingUrl": "https://play.google.com/store/apps/details?id=com.my.evolution.android&referrer=utm_source%3D0-2076389_2000078",
+																		"count": 228880
+																},
+																{
+																		"network": "OK",
+																		"logoUrl": "https://r.mradx.net/img/EA/F49C26.png",
+																		"bannerUrl": "https://r.mradx.net/img/81/B8217E.jpg",
+																		"author": "Стратегия",
+																		"info": "Сражайся и побеждай!",
+																		"text": "Тебя ждет множество возможностей в игре «Jungle Heat»",
+																		"landingUrl": "https://play.google.com/store/apps/details?id=ru.mail.games.android.JungleHeat&referrer=utm_source%3D0-2073287_1401",
+																		"count": 195156
+																},
+																{
+																		"network": "OK",
+																		"logoUrl": "https://r.mradx.net/img/6C/B5D37C.png",
+																		"bannerUrl": "https://r.mradx.net/img/A1/5B724D.jpg",
+																		"author": "Игры",
+																		"info": "Герои Утопии",
+																		"text": "Хит зимы! Герои качаются 24 часа в сутки. Невероятно просто и захватывающе!",
+																		"landingUrl": "https://play.google.com/store/apps/details?id=com.my.heroesofutopia&referrer=utm_source=0-2095608_1",
+																		"count": 167831
+																},
+																{
+																		"network": "OK",
+																		"logoUrl": "https://r.mradx.net/img/EA/F49C26.png",
+																		"bannerUrl": "https://r.mradx.net/img/35/7F677C.jpg",
+																		"author": "Стратегия",
+																		"info": "Сражайся и побеждай!",
+																		"text": "Тебя ждет множество возможностей в игре «Jungle Heat»",
+																		"landingUrl": "https://itunes.apple.com/app/id652136891?mt=8&uo=4&at=11l8I2&ct=652136891%7C%7C0-2073288_1",
+																		"count": 160455
+																}
+														],
+														"content": [
+																{
+																		"elem": ""
+																},
+																{
+																		"elem": "items",
+																		"content": [
+																				{
+																						"block": "ad",
+																						"ad": {
+																								"network": "OK",
+																								"logoUrl": "https://r.mradx.net/img/5B/21CEC2.jpg",
+																								"bannerUrl": "https://r.mradx.net/img/0F/A7C605.jpg",
+																								"author": "Стратегия",
+																								"info": "Iron Desert",
+																								"text": "Буря в пустыне набирает силу. Посмотри видео и присоединяйся!12+",
+																								"landingUrl": "https://play.google.com/store/apps/details?id=com.my.irondesert&referrer=utm_source=0-2078598_1",
+																								"count": 531421
+																						},
+																						"mix": {
+																								"block": "ads",
+																								"elem": "item"
+																						},
+																						"content": [
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/5B/21CEC2.jpg",
+																										"mix": {
+																												"elem": "logo",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "header",
+																										"content": [
+																												{
+																														"elem": "count",
+																														"content": "531421"
+																												},
+																												{
+																														"elem": "info",
+																														"content": "Iron Desert",
+																														"attrs": {
+																																"title": "Iron Desert"
+																														}
+																												},
+																												{
+																														"elem": "author",
+																														"content": "Стратегия",
+																														"attrs": {
+																																"title": "Стратегия"
+																														}
+																												},
+																												{
+																														"elem": "type",
+																														"content": "Стратегия"
+																												},
+																												{
+																														"elem": "os",
+																														"content": ""
+																												}
+																										]
+																								},
+																								{
+																										"elem": "text",
+																										"content": "Буря в пустыне набирает силу. Посмотри видео и присоединяйся!12+"
+																								},
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/0F/A7C605.jpg",
+																										"mix": {
+																												"elem": "banner",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "controls",
+																										"content": [
+																												{
+																														"block": "button",
+																														"mods": {
+																																"view": "plain",
+																																"size": "m"
+																														},
+																														"text": "Подробнее",
+																														"mix": {
+																																"elem": "more",
+																																"block": "ad"
+																														}
+																												}
+																										]
+																								},
+																								{
+																										"elem": "additional-info",
+																										"content": [
+																												{
+																														"elem": "additional-header",
+																														"content": "Информация"
+																												},
+																												{
+																														"elem": "additional-items",
+																														"content": [
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Платформа",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Платформа:"
+																																				},
+																																				{
+																																						"elem": "additional-value"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Таргетинг",
+																																		"value": "18-20(не пашет)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Таргетинг:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "18-20(не пашет)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Кликов",
+																																		"value": "что еще за клики",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Кликов:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "что еще за клики"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Гео",
+																																		"value": "нету",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Гео:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "нету"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CPC",
+																																		"value": "6 RUB (Знака валюты)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CPC:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "6 RUB (Знака валюты)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "СPM",
+																																		"value": "85 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "СPM:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "85 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CTR",
+																																		"value": "3,5%",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CTR:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3,5%"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Расход за период",
+																																		"value": "3675 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Расход за период:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3675 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Редиректы/Партнерки",
+																																		"value": null,
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Редиректы/Партнерки:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": null
+																																				}
+																																		]
+																																}
+																														]
+																												}
+																										]
+																								}
+																						]
+																				},
+																				{
+																						"block": "ad",
+																						"ad": {
+																								"network": "OK",
+																								"logoUrl": "https://r.mradx.net/img/6B/186425.png",
+																								"bannerUrl": "https://r.mradx.net/img/FC/07C766.jpg",
+																								"author": "Игры - настольные",
+																								"info": "Твой ход!",
+																								"text": "Блесни умом и стань главным Эрудитом среди друзей!",
+																								"landingUrl": "https://itunes.apple.com/app/id689975079?mt=8&uo=4&at=11l8I2&ct=689975079%7C%7C0-2068914_1",
+																								"count": 502567
+																						},
+																						"mix": {
+																								"block": "ads",
+																								"elem": "item"
+																						},
+																						"content": [
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/6B/186425.png",
+																										"mix": {
+																												"elem": "logo",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "header",
+																										"content": [
+																												{
+																														"elem": "count",
+																														"content": "502567"
+																												},
+																												{
+																														"elem": "info",
+																														"content": "Твой ход!",
+																														"attrs": {
+																																"title": "Твой ход!"
+																														}
+																												},
+																												{
+																														"elem": "author",
+																														"content": "Игры - настольные",
+																														"attrs": {
+																																"title": "Игры - настольные"
+																														}
+																												},
+																												{
+																														"elem": "type",
+																														"content": "Стратегия"
+																												},
+																												{
+																														"elem": "os",
+																														"content": ""
+																												}
+																										]
+																								},
+																								{
+																										"elem": "text",
+																										"content": "Блесни умом и стань главным Эрудитом среди друзей!"
+																								},
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/FC/07C766.jpg",
+																										"mix": {
+																												"elem": "banner",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "controls",
+																										"content": [
+																												{
+																														"block": "button",
+																														"mods": {
+																																"view": "plain",
+																																"size": "m"
+																														},
+																														"text": "Подробнее",
+																														"mix": {
+																																"elem": "more",
+																																"block": "ad"
+																														}
+																												}
+																										]
+																								},
+																								{
+																										"elem": "additional-info",
+																										"content": [
+																												{
+																														"elem": "additional-header",
+																														"content": "Информация"
+																												},
+																												{
+																														"elem": "additional-items",
+																														"content": [
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Платформа",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Платформа:"
+																																				},
+																																				{
+																																						"elem": "additional-value"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Таргетинг",
+																																		"value": "18-20(не пашет)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Таргетинг:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "18-20(не пашет)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Кликов",
+																																		"value": "что еще за клики",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Кликов:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "что еще за клики"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Гео",
+																																		"value": "нету",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Гео:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "нету"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CPC",
+																																		"value": "6 RUB (Знака валюты)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CPC:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "6 RUB (Знака валюты)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "СPM",
+																																		"value": "85 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "СPM:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "85 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CTR",
+																																		"value": "3,5%",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CTR:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3,5%"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Расход за период",
+																																		"value": "3675 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Расход за период:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3675 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Редиректы/Партнерки",
+																																		"value": null,
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Редиректы/Партнерки:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": null
+																																				}
+																																		]
+																																}
+																														]
+																												}
+																										]
+																								}
+																						]
+																				},
+																				{
+																						"block": "ad",
+																						"ad": {
+																								"network": "OK",
+																								"logoUrl": "https://r.mradx.net/img/18/AA8325.png",
+																								"bannerUrl": "https://r.mradx.net/img/17/710F3E.jpg",
+																								"author": "Стратегия",
+																								"info": "Новогодний хит",
+																								"text": "Уникальная механика боя в бесплатном HD хите от российских разработчиков!12+",
+																								"landingUrl": "https://play.google.com/store/apps/details?id=com.my.evolution.android&referrer=utm_source=0-2094910_1",
+																								"count": 446279
+																						},
+																						"mix": {
+																								"block": "ads",
+																								"elem": "item"
+																						},
+																						"content": [
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/18/AA8325.png",
+																										"mix": {
+																												"elem": "logo",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "header",
+																										"content": [
+																												{
+																														"elem": "count",
+																														"content": "446279"
+																												},
+																												{
+																														"elem": "info",
+																														"content": "Новогодний хит",
+																														"attrs": {
+																																"title": "Новогодний хит"
+																														}
+																												},
+																												{
+																														"elem": "author",
+																														"content": "Стратегия",
+																														"attrs": {
+																																"title": "Стратегия"
+																														}
+																												},
+																												{
+																														"elem": "type",
+																														"content": "Стратегия"
+																												},
+																												{
+																														"elem": "os",
+																														"content": ""
+																												}
+																										]
+																								},
+																								{
+																										"elem": "text",
+																										"content": "Уникальная механика боя в бесплатном HD хите от российских разработчиков!12+"
+																								},
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/17/710F3E.jpg",
+																										"mix": {
+																												"elem": "banner",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "controls",
+																										"content": [
+																												{
+																														"block": "button",
+																														"mods": {
+																																"view": "plain",
+																																"size": "m"
+																														},
+																														"text": "Подробнее",
+																														"mix": {
+																																"elem": "more",
+																																"block": "ad"
+																														}
+																												}
+																										]
+																								},
+																								{
+																										"elem": "additional-info",
+																										"content": [
+																												{
+																														"elem": "additional-header",
+																														"content": "Информация"
+																												},
+																												{
+																														"elem": "additional-items",
+																														"content": [
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Платформа",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Платформа:"
+																																				},
+																																				{
+																																						"elem": "additional-value"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Таргетинг",
+																																		"value": "18-20(не пашет)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Таргетинг:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "18-20(не пашет)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Кликов",
+																																		"value": "что еще за клики",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Кликов:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "что еще за клики"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Гео",
+																																		"value": "нету",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Гео:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "нету"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CPC",
+																																		"value": "6 RUB (Знака валюты)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CPC:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "6 RUB (Знака валюты)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "СPM",
+																																		"value": "85 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "СPM:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "85 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CTR",
+																																		"value": "3,5%",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CTR:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3,5%"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Расход за период",
+																																		"value": "3675 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Расход за период:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3675 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Редиректы/Партнерки",
+																																		"value": null,
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Редиректы/Партнерки:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": null
+																																				}
+																																		]
+																																}
+																														]
+																												}
+																										]
+																								}
+																						]
+																				},
+																				{
+																						"block": "ad",
+																						"ad": {
+																								"network": "OK",
+																								"logoUrl": "https://r.mradx.net/img/52/310457.png",
+																								"bannerUrl": "https://r.mradx.net/img/5D/8C3B1314.jpg",
+																								"author": "Стратегия",
+																								"info": "Новогодний хит",
+																								"text": "Уникальная механика боя в бесплатном HD хите от российских разработчиков!",
+																								"landingUrl": "https://play.google.com/store/apps/details?id=com.my.evolution.android&referrer=utm_source=0-2094910_1",
+																								"count": 395303
+																						},
+																						"mix": {
+																								"block": "ads",
+																								"elem": "item"
+																						},
+																						"content": [
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/52/310457.png",
+																										"mix": {
+																												"elem": "logo",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "header",
+																										"content": [
+																												{
+																														"elem": "count",
+																														"content": "395303"
+																												},
+																												{
+																														"elem": "info",
+																														"content": "Новогодний хит",
+																														"attrs": {
+																																"title": "Новогодний хит"
+																														}
+																												},
+																												{
+																														"elem": "author",
+																														"content": "Стратегия",
+																														"attrs": {
+																																"title": "Стратегия"
+																														}
+																												},
+																												{
+																														"elem": "type",
+																														"content": "Стратегия"
+																												},
+																												{
+																														"elem": "os",
+																														"content": ""
+																												}
+																										]
+																								},
+																								{
+																										"elem": "text",
+																										"content": "Уникальная механика боя в бесплатном HD хите от российских разработчиков!"
+																								},
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/5D/8C3B1314.jpg",
+																										"mix": {
+																												"elem": "banner",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "controls",
+																										"content": [
+																												{
+																														"block": "button",
+																														"mods": {
+																																"view": "plain",
+																																"size": "m"
+																														},
+																														"text": "Подробнее",
+																														"mix": {
+																																"elem": "more",
+																																"block": "ad"
+																														}
+																												}
+																										]
+																								},
+																								{
+																										"elem": "additional-info",
+																										"content": [
+																												{
+																														"elem": "additional-header",
+																														"content": "Информация"
+																												},
+																												{
+																														"elem": "additional-items",
+																														"content": [
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Платформа",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Платформа:"
+																																				},
+																																				{
+																																						"elem": "additional-value"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Таргетинг",
+																																		"value": "18-20(не пашет)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Таргетинг:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "18-20(не пашет)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Кликов",
+																																		"value": "что еще за клики",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Кликов:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "что еще за клики"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Гео",
+																																		"value": "нету",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Гео:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "нету"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CPC",
+																																		"value": "6 RUB (Знака валюты)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CPC:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "6 RUB (Знака валюты)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "СPM",
+																																		"value": "85 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "СPM:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "85 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CTR",
+																																		"value": "3,5%",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CTR:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3,5%"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Расход за период",
+																																		"value": "3675 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Расход за период:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3675 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Редиректы/Партнерки",
+																																		"value": null,
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Редиректы/Партнерки:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": null
+																																				}
+																																		]
+																																}
+																														]
+																												}
+																										]
+																								}
+																						]
+																				},
+																				{
+																						"block": "ad",
+																						"ad": {
+																								"network": "OK",
+																								"logoUrl": "https://r.mradx.net/img/57/D62B3B.jpg",
+																								"bannerUrl": "https://r.mradx.net/img/D9/6BB5C7.jpg",
+																								"author": "Телевизоры с функцией SMART TV, кинопросмотры, деньги на счет телефона.",
+																								"info": "Mr. Muscle дарит подарки!",
+																								"text": "Телевизоры с функцией SMART TV, кинопросмотры, деньги на счет телефона.",
+																								"landingUrl": "http://www.mrmuscle.pro/?utm_source=Mail.ru_Odnoklassniki_banners&utm_medium=banner&utm_campaign=MrMuscleSP",
+																								"count": 387471
+																						},
+																						"mix": {
+																								"block": "ads",
+																								"elem": "item"
+																						},
+																						"content": [
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/57/D62B3B.jpg",
+																										"mix": {
+																												"elem": "logo",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "header",
+																										"content": [
+																												{
+																														"elem": "count",
+																														"content": "387471"
+																												},
+																												{
+																														"elem": "info",
+																														"content": "Mr. Muscle дарит подарк…",
+																														"attrs": {
+																																"title": "Mr. Muscle дарит подарки!"
+																														}
+																												},
+																												{
+																														"elem": "author",
+																														"content": "Телевизоры с функцией SMART TV, к…",
+																														"attrs": {
+																																"title": "Телевизоры с функцией SMART TV, кинопросмотры, деньги на счет телефона."
+																														}
+																												},
+																												{
+																														"elem": "type",
+																														"content": "Стратегия"
+																												},
+																												{
+																														"elem": "os",
+																														"content": ""
+																												}
+																										]
+																								},
+																								{
+																										"elem": "text",
+																										"content": "Телевизоры с функцией SMART TV, кинопросмотры, деньги на счет телефона."
+																								},
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/D9/6BB5C7.jpg",
+																										"mix": {
+																												"elem": "banner",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "controls",
+																										"content": [
+																												{
+																														"block": "button",
+																														"mods": {
+																																"view": "plain",
+																																"size": "m"
+																														},
+																														"text": "Подробнее",
+																														"mix": {
+																																"elem": "more",
+																																"block": "ad"
+																														}
+																												}
+																										]
+																								},
+																								{
+																										"elem": "additional-info",
+																										"content": [
+																												{
+																														"elem": "additional-header",
+																														"content": "Информация"
+																												},
+																												{
+																														"elem": "additional-items",
+																														"content": [
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Платформа",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Платформа:"
+																																				},
+																																				{
+																																						"elem": "additional-value"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Таргетинг",
+																																		"value": "18-20(не пашет)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Таргетинг:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "18-20(не пашет)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Кликов",
+																																		"value": "что еще за клики",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Кликов:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "что еще за клики"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Гео",
+																																		"value": "нету",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Гео:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "нету"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CPC",
+																																		"value": "6 RUB (Знака валюты)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CPC:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "6 RUB (Знака валюты)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "СPM",
+																																		"value": "85 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "СPM:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "85 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CTR",
+																																		"value": "3,5%",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CTR:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3,5%"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Расход за период",
+																																		"value": "3675 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Расход за период:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3675 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Редиректы/Партнерки",
+																																		"value": null,
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Редиректы/Партнерки:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": null
+																																				}
+																																		]
+																																}
+																														]
+																												}
+																										]
+																								}
+																						]
+																				},
+																				{
+																						"block": "ad",
+																						"ad": {
+																								"network": "OK",
+																								"logoUrl": "https://r.mradx.net/img/EA/01D391.jpg",
+																								"bannerUrl": "https://r.mradx.net/img/88/F23C76.jpg",
+																								"author": "Стратегия",
+																								"info": "Уничтожь тиранов пустыни",
+																								"text": "Проверенный временем хит! Останови нефтяные войны и принеси мир на Восток!",
+																								"landingUrl": "https://play.google.com/store/apps/details?id=com.my.irondesert&referrer=utm_source=0-2095115_1",
+																								"count": 359390
+																						},
+																						"mix": {
+																								"block": "ads",
+																								"elem": "item"
+																						},
+																						"content": [
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/EA/01D391.jpg",
+																										"mix": {
+																												"elem": "logo",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "header",
+																										"content": [
+																												{
+																														"elem": "count",
+																														"content": "359390"
+																												},
+																												{
+																														"elem": "info",
+																														"content": "Уничтожь тиранов пустын…",
+																														"attrs": {
+																																"title": "Уничтожь тиранов пустыни"
+																														}
+																												},
+																												{
+																														"elem": "author",
+																														"content": "Стратегия",
+																														"attrs": {
+																																"title": "Стратегия"
+																														}
+																												},
+																												{
+																														"elem": "type",
+																														"content": "Стратегия"
+																												},
+																												{
+																														"elem": "os",
+																														"content": ""
+																												}
+																										]
+																								},
+																								{
+																										"elem": "text",
+																										"content": "Проверенный временем хит! Останови нефтяные войны и принеси мир на Восток!"
+																								},
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/88/F23C76.jpg",
+																										"mix": {
+																												"elem": "banner",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "controls",
+																										"content": [
+																												{
+																														"block": "button",
+																														"mods": {
+																																"view": "plain",
+																																"size": "m"
+																														},
+																														"text": "Подробнее",
+																														"mix": {
+																																"elem": "more",
+																																"block": "ad"
+																														}
+																												}
+																										]
+																								},
+																								{
+																										"elem": "additional-info",
+																										"content": [
+																												{
+																														"elem": "additional-header",
+																														"content": "Информация"
+																												},
+																												{
+																														"elem": "additional-items",
+																														"content": [
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Платформа",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Платформа:"
+																																				},
+																																				{
+																																						"elem": "additional-value"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Таргетинг",
+																																		"value": "18-20(не пашет)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Таргетинг:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "18-20(не пашет)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Кликов",
+																																		"value": "что еще за клики",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Кликов:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "что еще за клики"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Гео",
+																																		"value": "нету",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Гео:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "нету"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CPC",
+																																		"value": "6 RUB (Знака валюты)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CPC:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "6 RUB (Знака валюты)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "СPM",
+																																		"value": "85 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "СPM:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "85 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CTR",
+																																		"value": "3,5%",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CTR:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3,5%"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Расход за период",
+																																		"value": "3675 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Расход за период:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3675 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Редиректы/Партнерки",
+																																		"value": null,
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Редиректы/Партнерки:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": null
+																																				}
+																																		]
+																																}
+																														]
+																												}
+																										]
+																								}
+																						]
+																				},
+																				{
+																						"block": "ad",
+																						"ad": {
+																								"network": "OK",
+																								"logoUrl": "https://r.mradx.net/img/CE/D446CB.png",
+																								"bannerUrl": "https://r.mradx.net/img/9A/8CA8B7.jpg",
+																								"author": "Официальное приложение",
+																								"info": "Одноклассники",
+																								"text": "Читай ленту и общайся с друзьями через официальное приложение!12+",
+																								"landingUrl": "https://play.google.com/store/apps/details?id=ru.ok.android&referrer=utm_campaign=948341&utm_medium=banner&utm_content=18176925&utm_source=ok.ru&rb_clickid=18176925-1444939826-186450999",
+																								"count": 327097
+																						},
+																						"mix": {
+																								"block": "ads",
+																								"elem": "item"
+																						},
+																						"content": [
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/CE/D446CB.png",
+																										"mix": {
+																												"elem": "logo",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "header",
+																										"content": [
+																												{
+																														"elem": "count",
+																														"content": "327097"
+																												},
+																												{
+																														"elem": "info",
+																														"content": "Одноклассники",
+																														"attrs": {
+																																"title": "Одноклассники"
+																														}
+																												},
+																												{
+																														"elem": "author",
+																														"content": "Официальное приложение",
+																														"attrs": {
+																																"title": "Официальное приложение"
+																														}
+																												},
+																												{
+																														"elem": "type",
+																														"content": "Стратегия"
+																												},
+																												{
+																														"elem": "os",
+																														"content": ""
+																												}
+																										]
+																								},
+																								{
+																										"elem": "text",
+																										"content": "Читай ленту и общайся с друзьями через официальное приложение!12+"
+																								},
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/9A/8CA8B7.jpg",
+																										"mix": {
+																												"elem": "banner",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "controls",
+																										"content": [
+																												{
+																														"block": "button",
+																														"mods": {
+																																"view": "plain",
+																																"size": "m"
+																														},
+																														"text": "Подробнее",
+																														"mix": {
+																																"elem": "more",
+																																"block": "ad"
+																														}
+																												}
+																										]
+																								},
+																								{
+																										"elem": "additional-info",
+																										"content": [
+																												{
+																														"elem": "additional-header",
+																														"content": "Информация"
+																												},
+																												{
+																														"elem": "additional-items",
+																														"content": [
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Платформа",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Платформа:"
+																																				},
+																																				{
+																																						"elem": "additional-value"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Таргетинг",
+																																		"value": "18-20(не пашет)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Таргетинг:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "18-20(не пашет)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Кликов",
+																																		"value": "что еще за клики",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Кликов:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "что еще за клики"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Гео",
+																																		"value": "нету",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Гео:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "нету"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CPC",
+																																		"value": "6 RUB (Знака валюты)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CPC:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "6 RUB (Знака валюты)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "СPM",
+																																		"value": "85 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "СPM:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "85 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CTR",
+																																		"value": "3,5%",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CTR:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3,5%"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Расход за период",
+																																		"value": "3675 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Расход за период:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3675 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Редиректы/Партнерки",
+																																		"value": null,
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Редиректы/Партнерки:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": null
+																																				}
+																																		]
+																																}
+																														]
+																												}
+																										]
+																								}
+																						]
+																				},
+																				{
+																						"block": "ad",
+																						"ad": {
+																								"network": "OK",
+																								"logoUrl": "https://r.mradx.net/img/70/B7E39B.png",
+																								"bannerUrl": "https://r.mradx.net/img/CA/BE20C0.jpg",
+																								"author": "Официальное приложение",
+																								"info": "Одноклассники",
+																								"text": "Читай ленту и общайся с друзьями через официальное приложение!12+",
+																								"landingUrl": "itms-apps://itunes.apple.com/app/id398465290",
+																								"count": 323133
+																						},
+																						"mix": {
+																								"block": "ads",
+																								"elem": "item"
+																						},
+																						"content": [
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/70/B7E39B.png",
+																										"mix": {
+																												"elem": "logo",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "header",
+																										"content": [
+																												{
+																														"elem": "count",
+																														"content": "323133"
+																												},
+																												{
+																														"elem": "info",
+																														"content": "Одноклассники",
+																														"attrs": {
+																																"title": "Одноклассники"
+																														}
+																												},
+																												{
+																														"elem": "author",
+																														"content": "Официальное приложение",
+																														"attrs": {
+																																"title": "Официальное приложение"
+																														}
+																												},
+																												{
+																														"elem": "type",
+																														"content": "Стратегия"
+																												},
+																												{
+																														"elem": "os",
+																														"content": ""
+																												}
+																										]
+																								},
+																								{
+																										"elem": "text",
+																										"content": "Читай ленту и общайся с друзьями через официальное приложение!12+"
+																								},
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/CA/BE20C0.jpg",
+																										"mix": {
+																												"elem": "banner",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "controls",
+																										"content": [
+																												{
+																														"block": "button",
+																														"mods": {
+																																"view": "plain",
+																																"size": "m"
+																														},
+																														"text": "Подробнее",
+																														"mix": {
+																																"elem": "more",
+																																"block": "ad"
+																														}
+																												}
+																										]
+																								},
+																								{
+																										"elem": "additional-info",
+																										"content": [
+																												{
+																														"elem": "additional-header",
+																														"content": "Информация"
+																												},
+																												{
+																														"elem": "additional-items",
+																														"content": [
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Платформа",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Платформа:"
+																																				},
+																																				{
+																																						"elem": "additional-value"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Таргетинг",
+																																		"value": "18-20(не пашет)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Таргетинг:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "18-20(не пашет)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Кликов",
+																																		"value": "что еще за клики",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Кликов:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "что еще за клики"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Гео",
+																																		"value": "нету",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Гео:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "нету"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CPC",
+																																		"value": "6 RUB (Знака валюты)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CPC:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "6 RUB (Знака валюты)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "СPM",
+																																		"value": "85 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "СPM:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "85 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CTR",
+																																		"value": "3,5%",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CTR:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3,5%"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Расход за период",
+																																		"value": "3675 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Расход за период:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3675 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Редиректы/Партнерки",
+																																		"value": null,
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Редиректы/Партнерки:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": null
+																																				}
+																																		]
+																																}
+																														]
+																												}
+																										]
+																								}
+																						]
+																				},
+																				{
+																						"block": "ad",
+																						"ad": {
+																								"network": "OK",
+																								"logoUrl": "https://r.mradx.net/img/6D/A4CF25.png",
+																								"bannerUrl": "https://r.mradx.net/img/CF/1731FA.jpg",
+																								"author": "m.tabor.ru",
+																								"info": "Сайт знакомств в Москве",
+																								"text": "Популярный в Москве сайт знакомств. \nВыбор тысяч москвичей.\nЗаходите с мобильного!",
+																								"landingUrl": "http://m.tabor.ru/regpromo.php",
+																								"count": 287634
+																						},
+																						"mix": {
+																								"block": "ads",
+																								"elem": "item"
+																						},
+																						"content": [
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/6D/A4CF25.png",
+																										"mix": {
+																												"elem": "logo",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "header",
+																										"content": [
+																												{
+																														"elem": "count",
+																														"content": "287634"
+																												},
+																												{
+																														"elem": "info",
+																														"content": "Сайт знакомств в Москве",
+																														"attrs": {
+																																"title": "Сайт знакомств в Москве"
+																														}
+																												},
+																												{
+																														"elem": "author",
+																														"content": "m.tabor.ru",
+																														"attrs": {
+																																"title": "m.tabor.ru"
+																														}
+																												},
+																												{
+																														"elem": "type",
+																														"content": "Стратегия"
+																												},
+																												{
+																														"elem": "os",
+																														"content": ""
+																												}
+																										]
+																								},
+																								{
+																										"elem": "text",
+																										"content": "Популярный в Москве сайт знакомств. \nВыбор тысяч москвичей.\nЗаходите с мобильного!"
+																								},
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/CF/1731FA.jpg",
+																										"mix": {
+																												"elem": "banner",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "controls",
+																										"content": [
+																												{
+																														"block": "button",
+																														"mods": {
+																																"view": "plain",
+																																"size": "m"
+																														},
+																														"text": "Подробнее",
+																														"mix": {
+																																"elem": "more",
+																																"block": "ad"
+																														}
+																												}
+																										]
+																								},
+																								{
+																										"elem": "additional-info",
+																										"content": [
+																												{
+																														"elem": "additional-header",
+																														"content": "Информация"
+																												},
+																												{
+																														"elem": "additional-items",
+																														"content": [
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Платформа",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Платформа:"
+																																				},
+																																				{
+																																						"elem": "additional-value"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Таргетинг",
+																																		"value": "18-20(не пашет)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Таргетинг:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "18-20(не пашет)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Кликов",
+																																		"value": "что еще за клики",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Кликов:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "что еще за клики"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Гео",
+																																		"value": "нету",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Гео:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "нету"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CPC",
+																																		"value": "6 RUB (Знака валюты)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CPC:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "6 RUB (Знака валюты)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "СPM",
+																																		"value": "85 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "СPM:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "85 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CTR",
+																																		"value": "3,5%",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CTR:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3,5%"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Расход за период",
+																																		"value": "3675 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Расход за период:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3675 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Редиректы/Партнерки",
+																																		"value": null,
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Редиректы/Партнерки:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": null
+																																				}
+																																		]
+																																}
+																														]
+																												}
+																										]
+																								}
+																						]
+																				},
+																				{
+																						"block": "ad",
+																						"ad": {
+																								"network": "OK",
+																								"logoUrl": "https://r.mradx.net/img/5B/21CEC2.jpg",
+																								"bannerUrl": "https://r.mradx.net/img/86/052D0C.jpg",
+																								"author": "Стратегия",
+																								"info": "Уничтожь тиранов пустыни",
+																								"text": "Проверенный временем хит! Останови нефтяные войны и принеси мир на Восток!12+",
+																								"landingUrl": "https://play.google.com/store/apps/details?id=com.my.irondesert&referrer=utm_source=0-2095115_1",
+																								"count": 253803
+																						},
+																						"mix": {
+																								"block": "ads",
+																								"elem": "item"
+																						},
+																						"content": [
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/5B/21CEC2.jpg",
+																										"mix": {
+																												"elem": "logo",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "header",
+																										"content": [
+																												{
+																														"elem": "count",
+																														"content": "253803"
+																												},
+																												{
+																														"elem": "info",
+																														"content": "Уничтожь тиранов пустын…",
+																														"attrs": {
+																																"title": "Уничтожь тиранов пустыни"
+																														}
+																												},
+																												{
+																														"elem": "author",
+																														"content": "Стратегия",
+																														"attrs": {
+																																"title": "Стратегия"
+																														}
+																												},
+																												{
+																														"elem": "type",
+																														"content": "Стратегия"
+																												},
+																												{
+																														"elem": "os",
+																														"content": ""
+																												}
+																										]
+																								},
+																								{
+																										"elem": "text",
+																										"content": "Проверенный временем хит! Останови нефтяные войны и принеси мир на Восток!12+"
+																								},
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/86/052D0C.jpg",
+																										"mix": {
+																												"elem": "banner",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "controls",
+																										"content": [
+																												{
+																														"block": "button",
+																														"mods": {
+																																"view": "plain",
+																																"size": "m"
+																														},
+																														"text": "Подробнее",
+																														"mix": {
+																																"elem": "more",
+																																"block": "ad"
+																														}
+																												}
+																										]
+																								},
+																								{
+																										"elem": "additional-info",
+																										"content": [
+																												{
+																														"elem": "additional-header",
+																														"content": "Информация"
+																												},
+																												{
+																														"elem": "additional-items",
+																														"content": [
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Платформа",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Платформа:"
+																																				},
+																																				{
+																																						"elem": "additional-value"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Таргетинг",
+																																		"value": "18-20(не пашет)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Таргетинг:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "18-20(не пашет)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Кликов",
+																																		"value": "что еще за клики",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Кликов:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "что еще за клики"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Гео",
+																																		"value": "нету",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Гео:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "нету"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CPC",
+																																		"value": "6 RUB (Знака валюты)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CPC:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "6 RUB (Знака валюты)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "СPM",
+																																		"value": "85 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "СPM:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "85 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CTR",
+																																		"value": "3,5%",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CTR:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3,5%"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Расход за период",
+																																		"value": "3675 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Расход за период:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3675 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Редиректы/Партнерки",
+																																		"value": null,
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Редиректы/Партнерки:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": null
+																																				}
+																																		]
+																																}
+																														]
+																												}
+																										]
+																								}
+																						]
+																				},
+																				{
+																						"block": "ad",
+																						"ad": {
+																								"network": "OK",
+																								"logoUrl": "https://r.mradx.net/img/DD/01B972.png",
+																								"bannerUrl": "https://r.mradx.net/img/2E/9AE116.jpg",
+																								"author": "Игры",
+																								"info": "Хит зимы",
+																								"text": "Этот замок станет твоим, если сможешь его защитить! Новинка от легендарных разработчиков!",
+																								"landingUrl": "https://play.google.com/store/apps/details?id=com.my.might.glory.fantasy.strategy&referrer=utm_source=0-2084724_1",
+																								"count": 232936
+																						},
+																						"mix": {
+																								"block": "ads",
+																								"elem": "item"
+																						},
+																						"content": [
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/DD/01B972.png",
+																										"mix": {
+																												"elem": "logo",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "header",
+																										"content": [
+																												{
+																														"elem": "count",
+																														"content": "232936"
+																												},
+																												{
+																														"elem": "info",
+																														"content": "Хит зимы",
+																														"attrs": {
+																																"title": "Хит зимы"
+																														}
+																												},
+																												{
+																														"elem": "author",
+																														"content": "Игры",
+																														"attrs": {
+																																"title": "Игры"
+																														}
+																												},
+																												{
+																														"elem": "type",
+																														"content": "Стратегия"
+																												},
+																												{
+																														"elem": "os",
+																														"content": ""
+																												}
+																										]
+																								},
+																								{
+																										"elem": "text",
+																										"content": "Этот замок станет твоим, если сможешь его защитить! Новинка от легендарных разработчиков!"
+																								},
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/2E/9AE116.jpg",
+																										"mix": {
+																												"elem": "banner",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "controls",
+																										"content": [
+																												{
+																														"block": "button",
+																														"mods": {
+																																"view": "plain",
+																																"size": "m"
+																														},
+																														"text": "Подробнее",
+																														"mix": {
+																																"elem": "more",
+																																"block": "ad"
+																														}
+																												}
+																										]
+																								},
+																								{
+																										"elem": "additional-info",
+																										"content": [
+																												{
+																														"elem": "additional-header",
+																														"content": "Информация"
+																												},
+																												{
+																														"elem": "additional-items",
+																														"content": [
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Платформа",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Платформа:"
+																																				},
+																																				{
+																																						"elem": "additional-value"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Таргетинг",
+																																		"value": "18-20(не пашет)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Таргетинг:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "18-20(не пашет)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Кликов",
+																																		"value": "что еще за клики",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Кликов:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "что еще за клики"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Гео",
+																																		"value": "нету",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Гео:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "нету"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CPC",
+																																		"value": "6 RUB (Знака валюты)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CPC:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "6 RUB (Знака валюты)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "СPM",
+																																		"value": "85 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "СPM:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "85 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CTR",
+																																		"value": "3,5%",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CTR:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3,5%"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Расход за период",
+																																		"value": "3675 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Расход за период:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3675 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Редиректы/Партнерки",
+																																		"value": null,
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Редиректы/Партнерки:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": null
+																																				}
+																																		]
+																																}
+																														]
+																												}
+																										]
+																								}
+																						]
+																				},
+																				{
+																						"block": "ad",
+																						"ad": {
+																								"network": "OK",
+																								"logoUrl": "https://r.mradx.net/img/18/AA8325.png",
+																								"bannerUrl": "https://r.mradx.net/img/37/964139.jpg",
+																								"author": "Стратегия",
+																								"info": "Враги не дремлют",
+																								"text": "Противник жесток и коварен, но на твоей стороне непобедимая команда! Действуй!",
+																								"landingUrl": "https://play.google.com/store/apps/details?id=com.my.evolution.android&referrer=utm_source%3D0-2076389_2000078",
+																								"count": 228880
+																						},
+																						"mix": {
+																								"block": "ads",
+																								"elem": "item"
+																						},
+																						"content": [
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/18/AA8325.png",
+																										"mix": {
+																												"elem": "logo",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "header",
+																										"content": [
+																												{
+																														"elem": "count",
+																														"content": "228880"
+																												},
+																												{
+																														"elem": "info",
+																														"content": "Враги не дремлют",
+																														"attrs": {
+																																"title": "Враги не дремлют"
+																														}
+																												},
+																												{
+																														"elem": "author",
+																														"content": "Стратегия",
+																														"attrs": {
+																																"title": "Стратегия"
+																														}
+																												},
+																												{
+																														"elem": "type",
+																														"content": "Стратегия"
+																												},
+																												{
+																														"elem": "os",
+																														"content": ""
+																												}
+																										]
+																								},
+																								{
+																										"elem": "text",
+																										"content": "Противник жесток и коварен, но на твоей стороне непобедимая команда! Действуй!"
+																								},
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/37/964139.jpg",
+																										"mix": {
+																												"elem": "banner",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "controls",
+																										"content": [
+																												{
+																														"block": "button",
+																														"mods": {
+																																"view": "plain",
+																																"size": "m"
+																														},
+																														"text": "Подробнее",
+																														"mix": {
+																																"elem": "more",
+																																"block": "ad"
+																														}
+																												}
+																										]
+																								},
+																								{
+																										"elem": "additional-info",
+																										"content": [
+																												{
+																														"elem": "additional-header",
+																														"content": "Информация"
+																												},
+																												{
+																														"elem": "additional-items",
+																														"content": [
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Платформа",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Платформа:"
+																																				},
+																																				{
+																																						"elem": "additional-value"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Таргетинг",
+																																		"value": "18-20(не пашет)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Таргетинг:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "18-20(не пашет)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Кликов",
+																																		"value": "что еще за клики",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Кликов:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "что еще за клики"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Гео",
+																																		"value": "нету",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Гео:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "нету"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CPC",
+																																		"value": "6 RUB (Знака валюты)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CPC:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "6 RUB (Знака валюты)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "СPM",
+																																		"value": "85 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "СPM:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "85 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CTR",
+																																		"value": "3,5%",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CTR:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3,5%"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Расход за период",
+																																		"value": "3675 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Расход за период:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3675 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Редиректы/Партнерки",
+																																		"value": null,
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Редиректы/Партнерки:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": null
+																																				}
+																																		]
+																																}
+																														]
+																												}
+																										]
+																								}
+																						]
+																				},
+																				{
+																						"block": "ad",
+																						"ad": {
+																								"network": "OK",
+																								"logoUrl": "https://r.mradx.net/img/EA/F49C26.png",
+																								"bannerUrl": "https://r.mradx.net/img/81/B8217E.jpg",
+																								"author": "Стратегия",
+																								"info": "Сражайся и побеждай!",
+																								"text": "Тебя ждет множество возможностей в игре «Jungle Heat»",
+																								"landingUrl": "https://play.google.com/store/apps/details?id=ru.mail.games.android.JungleHeat&referrer=utm_source%3D0-2073287_1401",
+																								"count": 195156
+																						},
+																						"mix": {
+																								"block": "ads",
+																								"elem": "item"
+																						},
+																						"content": [
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/EA/F49C26.png",
+																										"mix": {
+																												"elem": "logo",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "header",
+																										"content": [
+																												{
+																														"elem": "count",
+																														"content": "195156"
+																												},
+																												{
+																														"elem": "info",
+																														"content": "Сражайся и побеждай!",
+																														"attrs": {
+																																"title": "Сражайся и побеждай!"
+																														}
+																												},
+																												{
+																														"elem": "author",
+																														"content": "Стратегия",
+																														"attrs": {
+																																"title": "Стратегия"
+																														}
+																												},
+																												{
+																														"elem": "type",
+																														"content": "Стратегия"
+																												},
+																												{
+																														"elem": "os",
+																														"content": ""
+																												}
+																										]
+																								},
+																								{
+																										"elem": "text",
+																										"content": "Тебя ждет множество возможностей в игре «Jungle Heat»"
+																								},
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/81/B8217E.jpg",
+																										"mix": {
+																												"elem": "banner",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "controls",
+																										"content": [
+																												{
+																														"block": "button",
+																														"mods": {
+																																"view": "plain",
+																																"size": "m"
+																														},
+																														"text": "Подробнее",
+																														"mix": {
+																																"elem": "more",
+																																"block": "ad"
+																														}
+																												}
+																										]
+																								},
+																								{
+																										"elem": "additional-info",
+																										"content": [
+																												{
+																														"elem": "additional-header",
+																														"content": "Информация"
+																												},
+																												{
+																														"elem": "additional-items",
+																														"content": [
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Платформа",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Платформа:"
+																																				},
+																																				{
+																																						"elem": "additional-value"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Таргетинг",
+																																		"value": "18-20(не пашет)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Таргетинг:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "18-20(не пашет)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Кликов",
+																																		"value": "что еще за клики",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Кликов:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "что еще за клики"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Гео",
+																																		"value": "нету",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Гео:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "нету"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CPC",
+																																		"value": "6 RUB (Знака валюты)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CPC:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "6 RUB (Знака валюты)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "СPM",
+																																		"value": "85 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "СPM:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "85 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CTR",
+																																		"value": "3,5%",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CTR:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3,5%"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Расход за период",
+																																		"value": "3675 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Расход за период:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3675 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Редиректы/Партнерки",
+																																		"value": null,
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Редиректы/Партнерки:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": null
+																																				}
+																																		]
+																																}
+																														]
+																												}
+																										]
+																								}
+																						]
+																				},
+																				{
+																						"block": "ad",
+																						"ad": {
+																								"network": "OK",
+																								"logoUrl": "https://r.mradx.net/img/6C/B5D37C.png",
+																								"bannerUrl": "https://r.mradx.net/img/A1/5B724D.jpg",
+																								"author": "Игры",
+																								"info": "Герои Утопии",
+																								"text": "Хит зимы! Герои качаются 24 часа в сутки. Невероятно просто и захватывающе!",
+																								"landingUrl": "https://play.google.com/store/apps/details?id=com.my.heroesofutopia&referrer=utm_source=0-2095608_1",
+																								"count": 167831
+																						},
+																						"mix": {
+																								"block": "ads",
+																								"elem": "item"
+																						},
+																						"content": [
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/6C/B5D37C.png",
+																										"mix": {
+																												"elem": "logo",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "header",
+																										"content": [
+																												{
+																														"elem": "count",
+																														"content": "167831"
+																												},
+																												{
+																														"elem": "info",
+																														"content": "Герои Утопии",
+																														"attrs": {
+																																"title": "Герои Утопии"
+																														}
+																												},
+																												{
+																														"elem": "author",
+																														"content": "Игры",
+																														"attrs": {
+																																"title": "Игры"
+																														}
+																												},
+																												{
+																														"elem": "type",
+																														"content": "Стратегия"
+																												},
+																												{
+																														"elem": "os",
+																														"content": ""
+																												}
+																										]
+																								},
+																								{
+																										"elem": "text",
+																										"content": "Хит зимы! Герои качаются 24 часа в сутки. Невероятно просто и захватывающе!"
+																								},
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/A1/5B724D.jpg",
+																										"mix": {
+																												"elem": "banner",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "controls",
+																										"content": [
+																												{
+																														"block": "button",
+																														"mods": {
+																																"view": "plain",
+																																"size": "m"
+																														},
+																														"text": "Подробнее",
+																														"mix": {
+																																"elem": "more",
+																																"block": "ad"
+																														}
+																												}
+																										]
+																								},
+																								{
+																										"elem": "additional-info",
+																										"content": [
+																												{
+																														"elem": "additional-header",
+																														"content": "Информация"
+																												},
+																												{
+																														"elem": "additional-items",
+																														"content": [
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Платформа",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Платформа:"
+																																				},
+																																				{
+																																						"elem": "additional-value"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Таргетинг",
+																																		"value": "18-20(не пашет)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Таргетинг:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "18-20(не пашет)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Кликов",
+																																		"value": "что еще за клики",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Кликов:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "что еще за клики"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Гео",
+																																		"value": "нету",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Гео:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "нету"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CPC",
+																																		"value": "6 RUB (Знака валюты)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CPC:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "6 RUB (Знака валюты)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "СPM",
+																																		"value": "85 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "СPM:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "85 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CTR",
+																																		"value": "3,5%",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CTR:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3,5%"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Расход за период",
+																																		"value": "3675 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Расход за период:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3675 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Редиректы/Партнерки",
+																																		"value": null,
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Редиректы/Партнерки:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": null
+																																				}
+																																		]
+																																}
+																														]
+																												}
+																										]
+																								}
+																						]
+																				},
+																				{
+																						"block": "ad",
+																						"ad": {
+																								"network": "OK",
+																								"logoUrl": "https://r.mradx.net/img/EA/F49C26.png",
+																								"bannerUrl": "https://r.mradx.net/img/35/7F677C.jpg",
+																								"author": "Стратегия",
+																								"info": "Сражайся и побеждай!",
+																								"text": "Тебя ждет множество возможностей в игре «Jungle Heat»",
+																								"landingUrl": "https://itunes.apple.com/app/id652136891?mt=8&uo=4&at=11l8I2&ct=652136891%7C%7C0-2073288_1",
+																								"count": 160455
+																						},
+																						"mix": {
+																								"block": "ads",
+																								"elem": "item"
+																						},
+																						"content": [
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/EA/F49C26.png",
+																										"mix": {
+																												"elem": "logo",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "header",
+																										"content": [
+																												{
+																														"elem": "count",
+																														"content": "160455"
+																												},
+																												{
+																														"elem": "info",
+																														"content": "Сражайся и побеждай!",
+																														"attrs": {
+																																"title": "Сражайся и побеждай!"
+																														}
+																												},
+																												{
+																														"elem": "author",
+																														"content": "Стратегия",
+																														"attrs": {
+																																"title": "Стратегия"
+																														}
+																												},
+																												{
+																														"elem": "type",
+																														"content": "Стратегия"
+																												},
+																												{
+																														"elem": "os",
+																														"content": ""
+																												}
+																										]
+																								},
+																								{
+																										"elem": "text",
+																										"content": "Тебя ждет множество возможностей в игре «Jungle Heat»"
+																								},
+																								{
+																										"block": "image",
+																										"url": "https://r.mradx.net/img/35/7F677C.jpg",
+																										"mix": {
+																												"elem": "banner",
+																												"block": "ad"
+																										}
+																								},
+																								{
+																										"elem": "controls",
+																										"content": [
+																												{
+																														"block": "button",
+																														"mods": {
+																																"view": "plain",
+																																"size": "m"
+																														},
+																														"text": "Подробнее",
+																														"mix": {
+																																"elem": "more",
+																																"block": "ad"
+																														}
+																												}
+																										]
+																								},
+																								{
+																										"elem": "additional-info",
+																										"content": [
+																												{
+																														"elem": "additional-header",
+																														"content": "Информация"
+																												},
+																												{
+																														"elem": "additional-items",
+																														"content": [
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Платформа",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Платформа:"
+																																				},
+																																				{
+																																						"elem": "additional-value"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Таргетинг",
+																																		"value": "18-20(не пашет)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Таргетинг:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "18-20(не пашет)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Кликов",
+																																		"value": "что еще за клики",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Кликов:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "что еще за клики"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Гео",
+																																		"value": "нету",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Гео:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "нету"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CPC",
+																																		"value": "6 RUB (Знака валюты)",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CPC:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "6 RUB (Знака валюты)"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "СPM",
+																																		"value": "85 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "СPM:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "85 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "CTR",
+																																		"value": "3,5%",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "CTR:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3,5%"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Расход за период",
+																																		"value": "3675 RUB",
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Расход за период:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": "3675 RUB"
+																																				}
+																																		]
+																																},
+																																{
+																																		"elem": "additional-item",
+																																		"label": "Редиректы/Партнерки",
+																																		"value": null,
+																																		"content": [
+																																				{
+																																						"elem": "additional-label",
+																																						"content": "Редиректы/Партнерки:"
+																																				},
+																																				{
+																																						"elem": "additional-value",
+																																						"content": null
+																																				}
+																																		]
+																																}
+																														]
+																												}
+																										]
+																								}
+																						]
+																				}
+																		]
+																},
+																{
+																		"block": "pagination",
+																		"mix": {
+																				"elem": "pagination",
+																				"block": "ads"
+																		},
+																		"currentPage": 1,
+																		"totalPages": 19635,
+																		"content": [
+																				{
+																						"elem": "page",
+																						"content": "1",
+																						"elemMods": {
+																								"current": true
+																						},
+																						"href": "/inner/?bemjson=true&page=1&limit=15"
+																				},
+																				{
+																						"elem": "page",
+																						"content": "2",
+																						"elemMods": {
+																								"current": false
+																						},
+																						"href": "/inner/?bemjson=true&page=2&limit=15"
+																				},
+																				{
+																						"elem": "page",
+																						"content": "3",
+																						"elemMods": {
+																								"current": false
+																						},
+																						"href": "/inner/?bemjson=true&page=3&limit=15"
+																				},
+																				{
+																						"elem": "gap",
+																						"content": "..."
+																				},
+																				{
+																						"elem": "page",
+																						"content": "19633",
+																						"elemMods": {
+																								"current": false
+																						},
+																						"href": "/inner/?bemjson=true&page=19633&limit=15"
+																				},
+																				{
+																						"elem": "page",
+																						"content": "19634",
+																						"elemMods": {
+																								"current": false
+																						},
+																						"href": "/inner/?bemjson=true&page=19634&limit=15"
+																				},
+																				{
+																						"elem": "page",
+																						"content": "19635",
+																						"elemMods": {
+																								"current": false
+																						},
+																						"href": "/inner/?bemjson=true&page=19635&limit=15"
+																				}
+																		]
+																}
+														]
+												}
+										]
+								}
+						]
+				},
+				{
+						"block": "footer",
+						"content": [
+								{
+										"elem": "main",
+										"content": [
+												{
+														"elem": "part",
+														"elemMods": {
+																"blog": true
+														},
+														"content": [
+																{
+																		"elem": "p-header",
+																		"content": {
+																				"block": "link",
+																				"mods": {
+																						"pseudo": true
+																				},
+																				"content": "Блог"
+																		}
+																},
+																{
+																		"elem": "p-content",
+																		"content": [
+																				{
+																						"block": "post-thumb",
+																						"coverUrl": "/img/temp/post-thumb.jpg",
+																						"title": "Consectetur adipiscing elit, sed do eiusmod tempor",
+																						"date": "Jan 9, 2016"
+																				}
+																		]
+																}
+														]
+												},
+												{
+														"elem": "part",
+														"elemMods": {
+																"subscribe": true
+														},
+														"content": [
+																{
+																		"elem": "p-header",
+																		"content": {
+																				"block": "link",
+																				"mods": {
+																						"pseudo": true
+																				},
+																				"content": "Будь в курсе главного"
+																		}
+																},
+																{
+																		"elem": "p-content",
+																		"content": [
+																				{
+																						"block": "form",
+																						"action": "test",
+																						"content": [
+																								{
+																										"block": "text-submit",
+																										"placeholder": "Введите свой e-mail",
+																										"submitText": "Подписаться",
+																										"content": [
+																												{
+																														"block": "input",
+																														"mix": {
+																																"elem": "input",
+																																"block": "text-submit"
+																														},
+																														"mods": {},
+																														"placeholder": "Введите свой e-mail"
+																												},
+																												{
+																														"block": "button",
+																														"mods": {
+																																"size": "m",
+																																"type": "submit"
+																														},
+																														"mix": {
+																																"elem": "submit",
+																																"block": "text-submit"
+																														},
+																														"text": "Подписаться"
+																												}
+																										]
+																								}
+																						]
+																				}
+																		]
+																}
+														]
+												},
+												{
+														"elem": "part",
+														"elemMods": {
+																"contacts": true
+														},
+														"content": [
+																{
+																		"elem": "p-header",
+																		"content": {
+																				"block": "link",
+																				"mods": {
+																						"pseudo": true
+																				},
+																				"content": "Контакты"
+																		}
+																},
+																{
+																		"elem": "p-content",
+																		"content": {
+																				"block": "follow",
+																				"title": "15k followers",
+																				"hint": "Follow Us:",
+																				"socials": [
+																						{
+																								"type": "facebook",
+																								"url": "#"
+																						},
+																						{
+																								"type": "twitter",
+																								"url": "#"
+																						},
+																						{
+																								"type": "instagram",
+																								"url": "#"
+																						},
+																						{
+																								"type": "pinterest",
+																								"url": "#"
+																						},
+																						{
+																								"type": "google",
+																								"url": "#"
+																						},
+																						{
+																								"type": "youtube",
+																								"url": "#"
+																						},
+																						{
+																								"type": "dribbble",
+																								"url": "#"
+																						},
+																						{
+																								"type": "tumblr",
+																								"url": "#"
+																						}
+																				]
+																		}
+																}
+														]
+												}
+										]
+								},
+								{
+										"elem": "copyright",
+										"content": "© 2016 Copyright Macaw"
+								}
+						]
+				}
+		]
+}
