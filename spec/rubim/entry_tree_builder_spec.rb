@@ -17,17 +17,6 @@ describe Rubim::EntryTreeBuilder do
 			expect(result).to eq Rubim::Entry.new('test')
 		end
 
-		it 'returns proper tag' do
-			input = {block: 'test', tag: 'span'}
-
-			result = builder.build(input)
-
-			expected = Rubim::Entry.new('test')
-			expected.tag = 'span'
-
-			expect(result).to eq expected
-		end
-
 		it 'returns entry with string content' do
 			input = {block: 'test', content: 'test-content'}
 
@@ -59,18 +48,6 @@ describe Rubim::EntryTreeBuilder do
 			expected.content = [Rubim::Entry.new('b2'), Rubim::Entry.new('b3')]
 
 			expect(result).to eq expected
-		end
-
-		describe 'mods' do
-			it 'fills mods' do
-				input = {block: 'b1', mods: {test: true}}
-
-				result = builder.build(input)
-
-				expected = Rubim::Entry.from_hash(block: 'b1', mods: {test: true})
-
-				expect(result).to eq expected
-			end
 		end
 
 		describe 'js' do
