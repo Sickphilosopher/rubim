@@ -2,8 +2,11 @@ require 'rubim/entry'
 require 'rubim/context'
 require 'rubim/bundle'
 require 'rubim/exceptions'
+require 'rubim/array_utils'
 
 module Rubim
+	include ArrayUtils
+
 	class EntryTreeBuilder
 		def initialize(bundle = Rubim::Bundle.new)
 			@bundle = bundle
@@ -50,15 +53,6 @@ module Rubim
 			return process_elem(entry, context) if is_elem(entry)
 			return process_block(entry, context) if is_block(entry)
 			entry
-		end
-
-
-		def one_or_array(tree, &block)
-			if tree.is_a? Array
-				return tree.map &block
-			else
-				yield tree
-			end
 		end
 
 		def process_tree(tree, context, parent_block = nil)
