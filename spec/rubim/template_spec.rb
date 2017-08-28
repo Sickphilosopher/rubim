@@ -55,5 +55,49 @@ describe Rubim::Template do
 
 			expect(entry.content).to eq [{block: 'b2'}]
 		end
+
+		it 'adds entry mix' do
+			template = Rubim::Template.match({block: 'b'}) do
+				add_mix do
+					{block: 'b2'}
+				end
+			end
+
+			entry = Rubim::Entry.from_hash({block: 'b'})
+
+			entry = template.apply(entry)
+
+			expect(entry.mix).to eq [{block: 'b2'}]
+		end
+
+		it 'adds array mix' do
+			template = Rubim::Template.match({block: 'b'}) do
+				add_mix do
+					[{block: 'b2'}, {block: 'b3'}]
+				end
+			end
+
+			entry = Rubim::Entry.from_hash({block: 'b'})
+
+			entry = template.apply(entry)
+
+			expect(entry.mix).to eq [{block: 'b2'}, {block: 'b3'}]
+		end
+
+		it 'add mods' do
+			template = Rubim::Template.match({block: 'b'}) do
+				add_mods do
+					[
+						{mod: 'value'}
+					]
+				end
+			end
+
+			entry = Rubim::Entry.from_hash({block: 'b'})
+
+			entry = template.apply(entry)
+
+			expect(entry).to eq Rubim::Entry.from_hash(block: 'b', mods: [{mod: 'value'}])
+		end
 	end
 end
