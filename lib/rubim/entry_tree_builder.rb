@@ -5,9 +5,8 @@ require 'rubim/exceptions'
 require 'rubim/array_utils'
 
 module Rubim
-	include ArrayUtils
-
 	class EntryTreeBuilder
+		include ArrayUtils
 		def initialize(bundle = Rubim::Bundle.new)
 			@bundle = bundle
 		end
