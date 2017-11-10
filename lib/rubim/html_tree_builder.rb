@@ -15,12 +15,14 @@ module Rubim
 				process_entry(entry)
 			end
 		end
+
 	private
 		def process_entry(entry)
-			node = HtmlNode.new([], {})
+			node = HtmlNode.new(entry.tag || :div, [], {}, []) #todo remove fucking magick
 
 			process_node(entry, node)
 			process_js(entry, node)
+			node.children = get_children(entry) if entry.content
 			node
 		end
 
@@ -35,6 +37,17 @@ module Rubim
 			end
 			node.classes.concat classes
 			node.attributes.merge! attributes
+		end
+
+		def get_children(entry)
+			content = one_or_array(entry.content) do |child|
+				if child.is_a? String
+					next child
+				end
+				process_entry(child)
+			end
+			return content if content.is_a? Array
+			[content]
 		end
 
 		def block_mods_classes(block, mods)

@@ -1,3 +1,3 @@
 module Rubim
-	HtmlNode = Struct.new(:classes, :attributes)
+	HtmlNode = Struct.new(:tag, :classes, :attributes, :children)
 end
