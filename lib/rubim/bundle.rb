@@ -1,6 +1,7 @@
 module Rubim
 	class Bundle
-		def initialize
+		def initialize(levels: {})
+			@levels = levels
 			@templates = []
 		end
 
