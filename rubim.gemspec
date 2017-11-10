@@ -36,4 +36,6 @@ Gem::Specification.new do |spec|
 	spec.add_development_dependency "json"
 	spec.add_development_dependency "rubocop"
 	spec.add_development_dependency "simplecov"
+
+	spec.add_dependency "dry-configurable", "~> 0.7"
 end
